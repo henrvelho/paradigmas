@@ -1,4 +1,5 @@
--- trabalho 3
+-- Andrea Charao
+-- trabalho 3 paradigmas 2015
 
 -- Exercicio 1
 -- a funcao recebe um int e retorna um bool
