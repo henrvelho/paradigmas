@@ -1,4 +1,4 @@
--- trabalho 3
+-- trabalho 3 paradigmas
 
 -- a funcao recebe um int e retorna um bool
 -- verifica se e par/impar
@@ -26,7 +26,7 @@ hasEqHeads lista lista1 = head lista == head lista1
 addmr :: [String] -> [String]
 addmr lista =  map ("Mr " ++) lista
 
--- Exercicio 6 contar espaços
+-- Exercicio 6 contar espaÃ§os
 
 contespacos :: String -> Int
 contespacos lista = length  (filter (== ' ')  lista)
