@@ -20,7 +20,9 @@ then semVogais (tail lista) else head lista : semVogais (tail lista)
 
 --Exercicio 4
 
---
+translate :: [(Double,Double)] -> [(Double,Double)]
+translate [] = []
+
 
 --Exercicio 5
 
