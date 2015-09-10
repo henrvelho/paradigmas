@@ -13,8 +13,7 @@ addSuffix sufixo string =  [string ++ sufixo | string <- string ]
 
 addSuffixRecu :: String -> [String] -> [String]
 addSuffixRecu _ [] = []
-addSuffixRecu x = if(elem (head sufixo) "x")
-addSuffixRecu x = if (head x == sufixo)
+addSuffixRecu str1 list2 = (head list2 ++ str1) : addSuffix2 str1 (tail list2)
 
 
 
