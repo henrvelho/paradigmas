@@ -63,4 +63,30 @@ combine (n:ns) (y:ys) = [(n, y)] ++ combine ns ys
 -- numera ["abacaxi","mamao","banana"]
 -- [(1,"abacaxi"),(2,"mamao"),(3,"banana")]
 
-numera :: [String] -> [(Int,String)]
+-- numera :: [String] -> [(Int,String)]
+
+
+-- Exercicio 8
+-- Explique, em forma de comentário, o resultado de cada expressão abaixo.
+-- a) [ (x,y) | x <­ [1..5], even x, y <­ [(x + 1)..6], odd y ]
+
+-- é um conjunto de tupla, do par (x,y) que vai a lista de 1 até 5, o y vai (x +1)..6 ou seja: vai do 1 até o numero 6.
+
+-- b) [ a ++ b | a <­ ["lazy","big"], b <­ ["frog", "dog"]]
+
+-- a expressão concatena a lista a com a lista b de acordo com a ordem da lista
+-- gerando uma nova lista
+
+-- c) concat [ [a,'­'] | a <­ "paralelepipedo", a `elem` "aeiou"]
+
+-- a funcao concatena a string com um - se achar as vogais aeiou na palavra
+
+-- Exercicio 9
+-- . (G. Malcolm, Univ. Liverpool) Write a function crossProduct :: [a] ­>
+-- [b] ­> [(a,b)] that takes two lists xs and ys, and returns the list of all
+-- possible pairings:
+-- [ (x,y) | x <­ xs, y <­ ys ]
+-- without using the above list comprehension. (As an exercise in
+-- problem decomposition, try first defining a "helper" function
+-- pairWithAll :: a ­> [b] ­> [(a,b)]
+-- that pairs its first argument with each element in its second.)
