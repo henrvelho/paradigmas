@@ -15,8 +15,6 @@ addSuffixRecu :: String -> [String] -> [String]
 addSuffixRecu _ [] = []
 addSuffixRecu str1 list2 = (head list2 ++ str1) : addSuffix2 str1 (tail list2)
 
-
-
 --Exercicio 3 
 --Escreva uma função countShorts :: [String] ­> Int, que receba uma
 --lista de palavras e retorne a quantidade de palavras dessa lista que
