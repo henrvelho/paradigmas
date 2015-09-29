@@ -58,5 +58,35 @@ countdown(N,[N|T1]) :- H1 is N - 1, countdown(H1,T1).
 % 0,L).
 % L = []
 
-potencias(0,[0]).
-potencias(N,[N|T1]) 
+% potencias(0,[0]).
+% potencias(N,[M|T1]) 
+
+% EXERCICIO 5
+% Defina um predicado positivos(L1,L2), de forma que L2 seja uma lista
+% só com os elementos positivos de L1, conforme o exemplo abaixo:
+% positivos([
+% 1,0,1,
+% 2,9],
+% L).
+% L = [1, 9]
+
+positivos([],[]).
+positivos([H1|T1],[H2|T2]) :- H1 > 0, H2 is H1, positivos(T1,T2).
+positivos([_|T1],L) :- positivos(T1,L).
+
+
+% EXERCICIO 6
+% Considere que L1 e L2 sejam permutações de uma lista de elementos
+% distintos, sem repetições. Sabendo disso, defina um predicado
+% mesmaPosicao(A,L1,L2) para verificar se um elemento A está na mesma
+% posição nas listas L1 e L2. Exemplo de uso:
+% mesmaPosicao(
+% c,[a,b,c,d,e],[e,d,c,b,a]).
+% true
+% mesmaPosicao(
+% b,[a,b,c,d,e],[e,d,c,b,a]).
+% false
+
+mesmaPosicao(_,[],[]) :- false.
+mesmaPosicao(A,[H1|_],[H2|_]) :- A = H1, H1 = H2, true.
+mesmaPosicao(A,[_|T1],[_|T2]) :- mesmaPosicao(A,T1,T2).
