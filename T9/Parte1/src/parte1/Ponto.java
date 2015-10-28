@@ -9,7 +9,7 @@ import static java.lang.Math.sqrt;
 
 /**
  *
- * @author iffarroupilha09
+ * @author Henrique
  */
 public class Ponto {
     private float x;

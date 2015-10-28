@@ -7,7 +7,7 @@ package parte1;
 
 /**
  *
- * @author iffarroupilha09
+ * @author Henrique
  */
 public class Parte1 {
 

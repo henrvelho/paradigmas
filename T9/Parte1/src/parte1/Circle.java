@@ -9,7 +9,7 @@ import static java.lang.Math.pow;
 
 /**
  *
- * @author iffarroupilha09
+ * @author Henrique
  */
 public class Circle {
     private Ponto ponto;
