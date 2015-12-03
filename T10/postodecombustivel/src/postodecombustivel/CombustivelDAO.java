@@ -15,6 +15,10 @@ import java.sql.DriverManager;
 public class CombustivelDAO {
     
     public Connection c;
+    public CombustivelDAO(){
+        conectar();
+    }
+    
     
     public void conectar() {
 
@@ -32,9 +36,9 @@ public class CombustivelDAO {
     
     
 
-    public void inserir(String cnpj, String razaosocial, String nomefantasia, String bandeira, String endereco, String cep) {
+    public void inserir(String tipo, String dataColeta,Float preco) {
         try {
-            String query = "insert into posto (cnpj,razaosocial,nomefantasia,bandeira,endereco,cep) values ('" + cnpj + "', '" + razaosocial + "', '" + nomefantasia + "', '" + bandeira + "','" + endereco + "', '" + cep + "' )";
+            String query = "insert into posto (tipo,dataColeta,preco) values ('" + tipo + "', '" + dataColeta + "', '" + preco + "')";
             System.out.println(query);
             Statement st = (Statement) c.createStatement();
             int resultado = st.executeUpdate(query);
@@ -42,7 +46,7 @@ public class CombustivelDAO {
         }
 
     }
-
+/*
     public void alterar(String horaFinal, String vaga) {
         try {
             String query;
@@ -54,5 +58,5 @@ public class CombustivelDAO {
         }
 
     }
-    
+  */  
 }

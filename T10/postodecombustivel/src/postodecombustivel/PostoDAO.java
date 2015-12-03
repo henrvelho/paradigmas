@@ -15,7 +15,9 @@ import java.sql.DriverManager;
 public class PostoDAO {
     
     public Connection c;
-    
+    public PostoDAO(){
+        conectar();
+    }
     public void conectar() {
 
         try {
@@ -30,9 +32,9 @@ public class PostoDAO {
 
     }
 
-    public void inserir(String placa, String vaga, String horaInicial, String horaFinal) {
+    public void inserir(String razaoSocial, String nomeFantasis, String bandeira, String endereco, String cep, String imagem) {
         try {
-            String query = "insert into controle (placa,vaga,horaInicial,horaFinal) values ('" + placa + "', '" + vaga + "', '" + horaInicial + "', '" + horaFinal + "')";
+            String query = "insert into posto (razaoSocial,nomeFantasis,bandeira,endereco,cep,imagem) values ('" + razaoSocial + "', '" + nomeFantasis + "', '" + bandeira + "', '" + endereco + "','" + cep + "','" + imagem + "')";
             System.out.println(query);
             Statement st = (Statement) c.createStatement();
             int resultado = st.executeUpdate(query);
@@ -40,11 +42,11 @@ public class PostoDAO {
         }
 
     }
-
-    public void alterar(String horaFinal, String vaga) {
+/*
+    public void alterar(String razaoSocial, String nomeFantasis, String bandeira, String endereco, String cep, String imagem) {
         try {
             String query;
-            query = "update controle set horaFinal = '" + horaFinal + "' where vaga = '" + vaga + "'";
+            query = "update posto set horaFinal = '" + horaFinal + "' where vaga = '" + vaga + "'";
             System.out.print(query);
             Statement st = (Statement) c.createStatement();
             int resultado = st.executeUpdate(query);
@@ -53,6 +55,6 @@ public class PostoDAO {
 
     }
     
-    
+    */
     
 }

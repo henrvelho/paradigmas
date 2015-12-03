@@ -3,8 +3,8 @@
  * and open the template in the editor.
  */
 package View;
-
-/**
+//import Models.Posto
+import postodecombustivel.PostoDAO;/**
  *
  * @author Henrique
  */
@@ -41,6 +41,7 @@ public class CadastroPosto extends javax.swing.JFrame {
         txtbairro = new javax.swing.JTextField();
         txtcep = new javax.swing.JTextField();
         jbcadastrarposto = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,6 +72,18 @@ public class CadastroPosto extends javax.swing.JFrame {
         });
 
         jbcadastrarposto.setText("Cadastrar Posto");
+        jbcadastrarposto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbcadastrarpostoActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Voltar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,7 +112,9 @@ public class CadastroPosto extends javax.swing.JFrame {
                                 .addComponent(txtcep))
                             .addComponent(txtcnpj, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
+                        .addContainerGap()
+                        .addComponent(jButton1)
+                        .addGap(5, 5, 5)
                         .addComponent(jbcadastrarposto)))
                 .addContainerGap(194, Short.MAX_VALUE))
         );
@@ -135,7 +150,9 @@ public class CadastroPosto extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(txtcep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addComponent(jbcadastrarposto)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbcadastrarposto)
+                    .addComponent(jButton1))
                 .addGap(25, 25, 25))
         );
 
@@ -149,6 +166,27 @@ public class CadastroPosto extends javax.swing.JFrame {
     private void txtenderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtenderecoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtenderecoActionPerformed
+
+    private void jbcadastrarpostoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbcadastrarpostoActionPerformed
+       
+        
+        
+        PostoDAO db = new PostoDAO();
+       
+       db.inserir(txtrazaosocial.getText(), txtnomefantasia.getText(),txtbandeira.getText(),txtendereco.getText(),txtcep.getText(),null);
+       
+       
+        
+       
+    }//GEN-LAST:event_jbcadastrarpostoActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+       //TelaInicial.show();
+        
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -185,6 +223,7 @@ public class CadastroPosto extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
