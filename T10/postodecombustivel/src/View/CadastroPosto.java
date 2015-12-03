@@ -10,6 +10,10 @@ import postodecombustivel.PostoDAO;/**
  */
 public class CadastroPosto extends javax.swing.JFrame {
 
+    private static void destroy() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     /**
      * Creates new form CadastroPosto
      */
@@ -182,7 +186,7 @@ public class CadastroPosto extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
-       //TelaInicial.show();
+       CadastroPosto.destroy();
         
         
         

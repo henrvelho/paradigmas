@@ -10,6 +10,10 @@ package View;
  */
 public class TelaInicial extends javax.swing.JFrame {
 
+    static void destroy() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     /**
      * Creates new form TelaInicial
      */
